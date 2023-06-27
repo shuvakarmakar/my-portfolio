@@ -1,4 +1,3 @@
-import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import myImage from '../../src/assets/Shuva Karmakar.jpeg';
 
@@ -20,12 +19,14 @@ const Banner = () => {
                     style={{ fontSize: '2em', display: 'inline-block' }}
                     repeat={Infinity}
                 />
-                <p className="text-white opacity-50 my-4 text-justify">
-                    Welcome to my portfolio! I'm a passionate MERN stack web developer with expertise in HTML, CSS, JavaScript,
-                    React, Express.js, Node.js, and MongoDB. With a strong foundation in front-end development, I strive to create
-                    captivating user interfaces and seamless user experiences. I enjoy turning ideas into functional and visually
-                    appealing websites and web applications.
-                </p>
+                <div data-aos="fade-right">
+                    <p className="text-white opacity-50 my-4 text-justify">
+                        Welcome to my portfolio! I'm a passionate MERN stack web developer with expertise in HTML, CSS, JavaScript,
+                        React, Express.js, Node.js, and MongoDB. With a strong foundation in front-end development, I strive to create
+                        captivating user interfaces and seamless user experiences. I enjoy turning ideas into functional and visually
+                        appealing websites and web applications.
+                    </p>
+                </div>
             </div>
             <div>
                 <img
