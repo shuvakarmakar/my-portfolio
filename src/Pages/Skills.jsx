@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import htmlImage from '../../src/assets/Skills/html-92b76a73.png';
 import cssImage from '../../src/assets/Skills/css-79a7f026.png';
 import tailwindImage from '../../src/assets/Skills/tailwind-28e4d023.png';
