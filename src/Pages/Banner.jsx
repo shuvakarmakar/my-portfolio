@@ -1,7 +1,17 @@
 import { TypeAnimation } from 'react-type-animation';
 import myImage from '../../src/assets/Shuva Karmakar.jpeg';
+import { FaDownload } from 'react-icons/fa';
 
 const Banner = () => {
+
+    const handleDownload = () =>{
+        const url = "/public/shuva_karmakar_resume.pdf";
+        const anchor = document.createElement("a");
+        anchor.href = url;
+        anchor.download = "shuva_karmakar_resume.pdf"
+        anchor.click();
+    }
+
     return (
         <div className="bg-[#001C30] h-full md:h-[600px] flex flex-col md:flex-row justify-around items-center px-4 md:px-6 my-auto" id='about'>
             <div className="md:w-1/2 relative mt-6 md:0">
@@ -27,6 +37,7 @@ const Banner = () => {
                         appealing websites and web applications.
                     </p>
                 </div>
+                <button className='btn btn-secondary' onClick={handleDownload} ><FaDownload></FaDownload> Download Resume</button>
             </div>
             <div>
                 <img

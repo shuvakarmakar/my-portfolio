@@ -1,11 +1,10 @@
-import React from 'react';
-import { AiFillGithub, AiOutlineLink, AiOutlinePlayCircle } from 'react-icons/ai';
-import { BsArrowRight } from 'react-icons/bs';
+import React, { useRef } from 'react';
 import project1 from '../../src/assets/Projects/Project1.png';
 import project2 from '../../src/assets/Projects/Project2.png';
 import project3 from '../../src/assets/Projects/Project3.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 const Projects = () => {
     const projects = [
@@ -13,25 +12,25 @@ const Projects = () => {
             image: project1,
             title: 'School of Rock (Summer Camp School)',
             description: 'School of Rock (Summer Camp School)',
-            githubLink: 'https://github.com/example1',
-            serverSideLink: 'https://example1.com',
-            liveLink: 'https://example1-live.com'
+            githubLink: 'https://github.com/shuvakarmakar/summer-camp-school',
+            serverSideLink: 'https://github.com/shuvakarmakar/summer-camp-school-server',
+            liveLink: 'https://summer-camp-school-9d97b.web.app/'
         },
         {
             image: project2,
             title: 'Super Kiddo (Toys Marketplace)',
             description: 'Super Kiddo (Toys Marketplace)',
-            githubLink: 'https://github.com/example2',
-            serverSideLink: 'https://example2.com',
-            liveLink: 'https://example2-live.com'
+            githubLink: 'https://github.com/shuvakarmakar/toy-marketplace-client',
+            serverSideLink: 'https://github.com/shuvakarmakar/toy-marketplace-server',
+            liveLink: 'https://toy-marketplace-33160.web.app/'
         },
         {
             image: project3,
             title: 'Japanese Cuisine (Chef Recipe)',
             description: 'Japanese Cuisine (Chef Recipe)',
-            githubLink: 'https://github.com/example3',
-            serverSideLink: 'https://example3.com',
-            liveLink: 'https://example3-live.com'
+            githubLink: 'https://github.com/shuvakarmakar/chef-recipe-hunter-client-side',
+            serverSideLink: 'https://github.com/shuvakarmakar/chef-recipe-hunter-server-side',
+            liveLink: 'https://chef-recipe-hunter-409b5.web.app/'
         }
     ];
 
@@ -39,9 +38,18 @@ const Projects = () => {
         AOS.init();
     }, []);
 
+    const modalRefs = useRef([]);
+
+    const showModal = (index) => {
+        const modal = modalRefs.current[index];
+        if (modal) {
+            modal.showModal();
+        }
+    };
+
     return (
-        <div id='projects'>
-            <h2 className="text-4xl font-bold text-center mb-8">My Projects</h2>
+        <div id="projects">
+            <h2 className="text-4xl font-bold text-center my-10 md:my-16">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-10">
                 {projects.map((project, index) => (
                     <div
@@ -54,7 +62,7 @@ const Projects = () => {
                         </div>
                         <div className="card-body">
                             <h2 className="card-title">{project.title}</h2>
-                            <p>{project.description}</p>
+                            <br></br>
                             <div className="card-actions justify-between">
                                 <div className="flex items-center justify-between gap-2">
                                     <a
@@ -62,35 +70,48 @@ const Projects = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         title="GitHub"
-                                        className="text-blue-500 underline text-lg"
+                                        className="text-2xl hover:text-blue-500"
                                     >
-                                        <AiFillGithub />
+                                        <FaGithub />
                                     </a>
                                     <a
                                         href={project.serverSideLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         title="Server Side Link"
-                                        className="text-blue-500 underline text-lg"
+                                        className="text-2xl"
                                     >
-                                        <AiOutlineLink />
+                                        <FaLink />
                                     </a>
                                     <a
                                         href={project.liveLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         title="Live Link"
-                                        className="text-blue-500 underline text-lg"
+                                        className="text-2xl"
                                     >
-                                        <AiOutlinePlayCircle />
+                                        <FaLink />
                                     </a>
                                 </div>
-                                <button className="btn btn-primary">
-                                    Learn More
-                                    <BsArrowRight className="ml-2" />
+                                <button className="btn btn-sm btn-primary" onClick={() => showModal(index)}>
+                                    View Details
                                 </button>
                             </div>
                         </div>
+                        <dialog
+                            ref={(ref) => (modalRefs.current[index] = ref)}
+                            className="modal modal-bottom sm:modal-middle"
+                        >
+                            <form method="dialog" className="modal-box">
+                                <h3 className="font-bold text-lg">{project.title}</h3>
+                                <p className="py-4">{project.description}</p>
+                                <div className="modal-action">
+                                    <button className="btn" onClick={() => modalRefs.current[index]?.close()}>
+                                        Close
+                                    </button>
+                                </div>
+                            </form>
+                        </dialog>
                     </div>
                 ))}
             </div>
