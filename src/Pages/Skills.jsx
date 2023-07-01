@@ -34,7 +34,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="py-10">
+    <div className="py-10" id='skills'>
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-center text-4xl font-bold mb-8">My Skills</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">

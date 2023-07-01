@@ -3,7 +3,7 @@ import myImage from '../../src/assets/Shuva Karmakar.jpeg';
 
 const Banner = () => {
     return (
-        <div className="bg-[#001C30] h-full md:h-[600px] flex flex-col md:flex-row justify-around items-center px-4 md:px-6 my-auto">
+        <div className="bg-[#001C30] h-full md:h-[600px] flex flex-col md:flex-row justify-around items-center px-4 md:px-6 my-auto" id='about'>
             <div className="md:w-1/2 relative mt-6 md:0">
                 <h5 className="text-3xl leading-8 text-gray-600 mb-3">Hi! I'm</h5>
                 <h3 className="text-white text-4xl font-extrabold mb-4 font-Caveat">Shuva Karmakar</h3>
