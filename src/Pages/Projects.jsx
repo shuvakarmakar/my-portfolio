@@ -103,7 +103,7 @@ const Projects = () => {
                         </div>
                         <dialog
                             ref={(ref) => (modalRefs.current[index] = ref)}
-                            className="modal md:modal-bottom sm:modal-top"
+                            className="modal md:modal-middle sm:modal-top"
                         >
                             <form method="dialog" className="modal-box">
                                 <h3 className="font-bold text-lg">{project.title}</h3>

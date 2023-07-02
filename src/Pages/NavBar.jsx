@@ -32,16 +32,16 @@ const NavBar = () => {
                             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                         >
                             <li>
-                                <a onClick={() => handleScrollToSection("about")}>About</a>
+                                <a onClick={() => handleScrollToSection("about")} className="font-bold">About</a>
                             </li>
                             <li>
-                                <a onClick={() => handleScrollToSection("skills")}>Skills</a>
+                                <a onClick={() => handleScrollToSection("skills")} className="font-bold">Skills</a>
                             </li>
                             <li>
-                                <a onClick={() => handleScrollToSection("projects")}>Projects</a>
+                                <a onClick={() => handleScrollToSection("projects")} className="font-bold">Projects</a>
                             </li>
                             <li>
-                                <a onClick={() => handleScrollToSection("contact")}>Contact</a>
+                                <a onClick={() => handleScrollToSection("contact")} className="font-bold">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -50,16 +50,16 @@ const NavBar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li>
-                            <a onClick={() => handleScrollToSection("about")}>About</a>
+                            <a onClick={() => handleScrollToSection("about")} className="font-bold">About</a>
                         </li>
                         <li>
-                            <a onClick={() => handleScrollToSection("skills")}>Skills</a>
+                            <a onClick={() => handleScrollToSection("skills")} className="font-bold">Skills</a>
                         </li>
                         <li>
-                            <a onClick={() => handleScrollToSection("projects")}>Projects</a>
+                            <a onClick={() => handleScrollToSection("projects")} className="font-bold">Projects</a>
                         </li>
                         <li>
-                            <a onClick={() => handleScrollToSection("contact")}>Contact</a>
+                            <a onClick={() => handleScrollToSection("contact")} className="font-bold">Contact</a>
                         </li>
                     </ul>
                 </div>
