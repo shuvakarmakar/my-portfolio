@@ -11,26 +11,29 @@ const Projects = () => {
         {
             image: project1,
             title: 'School of Rock (Summer Camp School)',
-            description: 'School of Rock (Summer Camp School)',
             githubLink: 'https://github.com/shuvakarmakar/summer-camp-school',
             serverSideLink: 'https://github.com/shuvakarmakar/summer-camp-school-server',
-            liveLink: 'https://summer-camp-school-9d97b.web.app/'
+            liveLink: 'https://summer-camp-school-9d97b.web.app/',
+            description: 'This Website is focused on Summer Tour & School. In this website there are 3 roles(Admin, Instructor, Student). Admin can easily edit user roles from his Dashboard. Instructors can add , update, and delete classes from his dashboard and the admin can deny these classes. Student can select classes after signing up from home page or classes page, they can also delete class from their dashboard and a student can purchase multiple courses after doing payment',
+            technologies: 'Google Authentication, Tailwind, daisyUI, ReactJS, MongoDB, ExpressJS, NodeJS, Stripe',
         },
         {
             image: project2,
             title: 'Super Kiddo (Toys Marketplace)',
-            description: 'Super Kiddo (Toys Marketplace)',
             githubLink: 'https://github.com/shuvakarmakar/toy-marketplace-client',
             serverSideLink: 'https://github.com/shuvakarmakar/toy-marketplace-server',
-            liveLink: 'https://toy-marketplace-33160.web.app/'
+            liveLink: 'https://toy-marketplace-33160.web.app/',
+            description: 'This Website is focused on Toy Marketplace. A Seller can add, update, and delete Toys from his Dashboard, Sellere can easily see all sellers toys from ALLToys page. A search button included in All Toys page. In My Toys page a seller can see his all added toys',
+            technologies:  'Google Authentication, Tailwind, daisyIU, ReactJS, MongoDB, Express.JS, NodeJS'
         },
         {
             image: project3,
             title: 'Japanese Cuisine (Chef Recipe)',
-            description: 'Japanese Cuisine (Chef Recipe)',
             githubLink: 'https://github.com/shuvakarmakar/chef-recipe-hunter-client-side',
             serverSideLink: 'https://github.com/shuvakarmakar/chef-recipe-hunter-server-side',
-            liveLink: 'https://chef-recipe-hunter-409b5.web.app/'
+            liveLink: 'https://chef-recipe-hunter-409b5.web.app/',
+            description: ' This Website is focused on the Japanese Cuisine of Chefs. Users can see each chef’s recipe after signup. Without signing up nobody can not see Chef Recipe',
+            technologies:  'User authentication with Google using ReactJS, Tailwind, and Express JS'
         }
     ];
 
@@ -100,11 +103,12 @@ const Projects = () => {
                         </div>
                         <dialog
                             ref={(ref) => (modalRefs.current[index] = ref)}
-                            className="modal modal-bottom sm:modal-middle"
+                            className="modal md:modal-bottom sm:modal-top"
                         >
                             <form method="dialog" className="modal-box">
                                 <h3 className="font-bold text-lg">{project.title}</h3>
-                                <p className="py-4">{project.description}</p>
+                                <p className="py-4 text-justify"><span className='font-bold'>Description</span> : {project.description}</p>
+                                <p className="py-4 text-justify"><span className='font-bold'>Technologies</span> : {project.technologies}</p>
                                 <div className="modal-action">
                                     <button className="btn" onClick={() => modalRefs.current[index]?.close()}>
                                         Close

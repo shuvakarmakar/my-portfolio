@@ -9,6 +9,8 @@ import nodejsImage from '../../src/assets/Skills/nodeJs-d83eb6dd.png';
 import mongodbImage from '../../src/assets/Skills/download (3).png';
 import expressjsImage from '../../src/assets/Skills/express-afe64c50.png';
 import firebaseImage from '../../src/assets/Skills/firebase-e5a69ac5.png';
+import wordpress from '../../src/assets/Skills/Wordpress_Blue_logo.png';
+import github from '../../src/assets/Skills/25231.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -31,13 +33,15 @@ const Skills = () => {
     { name: 'MongoDB', image: mongodbImage },
     { name: 'Express.js', image: expressjsImage },
     { name: 'Firebase', image: firebaseImage },
+    { name: 'Wordpress', image: wordpress },
+    { name: 'Github', image: github },
   ];
 
   return (
     <div className="py-10" id='skills'>
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-center text-4xl font-bold mb-8">My Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
             <div
               className="bg-[#001C30] rounded-lg p-4 shadow-md"

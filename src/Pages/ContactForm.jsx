@@ -36,10 +36,11 @@ const ContactForm = () => {
     return (
         <div className='px-4 mb-10' id='contact'>
             <h2 className='text-4xl font-bold text-center my-10 md:my-16'>Contact Me</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                 <div className='' data-aos='fade-right'>
                     <form className='w-full mx-auto px-6' ref={form} onSubmit={sendEmail}>
-                        <label className='block mb-2'>Name</label>
+                        <h3 className='text-2xl font-bold mb-3 text-white'>Write Me Here :</h3>
+                        <label className='block mb-2 text-white'>Name</label>
                         <input
                             className='w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400'
                             type='text'
@@ -47,7 +48,7 @@ const ContactForm = () => {
                             placeholder='Enter your name'
                         />
 
-                        <label className='block mb-2'>Email</label>
+                        <label className='block mb-2 text-white'>Email</label>
                         <input
                             className='w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400'
                             type='email'
@@ -55,7 +56,7 @@ const ContactForm = () => {
                             placeholder='Enter your email'
                         />
 
-                        <label className='block mb-2'>Message</label>
+                        <label className='block mb-2 text-white'>Message</label>
                         <textarea
                             className='w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400'
                             name='message'
