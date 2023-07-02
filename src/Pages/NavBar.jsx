@@ -47,7 +47,7 @@ const NavBar = () => {
                     </div>
                     <a className="btn btn-ghost normal-case text-xl">Shuva Karmakar</a>
                 </div>
-                <div className="navbar-end hidden lg:flex">
+                <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li>
                             <a onClick={() => handleScrollToSection("about")}>About</a>
@@ -62,6 +62,9 @@ const NavBar = () => {
                             <a onClick={() => handleScrollToSection("contact")}>Contact</a>
                         </li>
                     </ul>
+                </div>
+                <div className="navbar-end">
+                    <button className="btn btn-outline btn-success" onClick={() => handleScrollToSection("contact")}>Hire Me</button>
                 </div>
             </div>
         </div>
