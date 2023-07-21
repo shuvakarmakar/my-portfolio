@@ -4,22 +4,30 @@ import { FaDownload } from 'react-icons/fa';
 
 const Banner = () => {
 
-    const handleDownload = () => {
-        // Check if the user is on a mobile device
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const handleDownload = async () => {
+        const url = "/Resume.pdf";
+        try {
+            const response = await fetch(url);
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
 
-        if (isMobile) {
-            // Provide a link to the resume for manual download on mobile
-            window.open("https://drive.google.com/file/d/1DK7l0K3vbJ-QvN4Pw0VT41z4J14rxpHl/view?usp=drive_link", '_blank');
-        } else {
-            // Download the resume directly on desktop
-            const url = "/public/shuva_karmakar_resume.pdf";
             const anchor = document.createElement("a");
-            anchor.href = url;
-            anchor.download = "shuva_karmakar_resume.pdf";
+            anchor.href = blobUrl;
+            anchor.setAttribute("download", "Resume.pdf");
+            anchor.style.display = "none";
+            document.body.appendChild(anchor);
             anchor.click();
+            document.body.removeChild(anchor);
+
+            URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+            console.error("Error downloading the file:", error);
         }
-    }
+    };
+
+
+
+
 
     return (
         <div className="bg-[#001C30] h-full md:h-[600px] flex flex-col-reverse md:flex-row justify-around items-center px-4 md:px-6 my-auto">
@@ -40,7 +48,7 @@ const Banner = () => {
                 />
                 <div data-aos="fade-right">
                     <p className="text-white opacity-50 my-4 text-justify">
-                        Welcome to my portfolio! I'm a passionate MERN stack web developer with expertise in HTML, CSS, JavaScript,
+                        Welcome to my portfolio! I am a passionate MERN stack web developer with expertise in HTML, CSS, JavaScript,
                         React, Express.js, Node.js, and MongoDB. With a strong foundation in front-end development, I strive to create
                         captivating user interfaces and seamless user experiences. I enjoy turning ideas into functional and visually
                         appealing websites and web applications.
