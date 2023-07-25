@@ -10,7 +10,7 @@ const AboutMe = () => {
 
     return (
         <>
-            <h2 className="text-4xl font-bold text-center my-10 md:my-16" id="about">About Me</h2>
+            <h2 className="text-4xl text-white font-bold text-center my-10 md:my-16" id="about">About Me</h2>
             <div className="flex flex-col md:flex-row items-center md:items-start px-4">
                 <div className="md:w-1/2" data-aos="fade-up" data-aos-duration="1000">
                     <img src={myImage} alt="Profile" className="w-full h-auto rounded-md" />

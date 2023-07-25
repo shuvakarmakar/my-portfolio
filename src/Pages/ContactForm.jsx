@@ -35,7 +35,7 @@ const ContactForm = () => {
     };
     return (
         <div className='px-4 mb-10' id='contact'>
-            <h2 className='text-4xl font-bold text-center my-10 md:my-16'>Contact Me</h2>
+            <h2 className='text-4xl font-bold text-center text-white my-10 md:my-16'>Contact Me</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                 <div className='' data-aos='fade-right'>
                     <form className='w-full mx-auto px-6' ref={form} onSubmit={sendEmail}>
