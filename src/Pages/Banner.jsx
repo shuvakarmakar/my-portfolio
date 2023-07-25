@@ -32,7 +32,7 @@ const Banner = () => {
     return (
         <div className="bg-[#001C30] h-full md:h-[600px] flex flex-col-reverse md:flex-row justify-around items-center px-4 md:px-6 my-auto">
             <div className="md:w-1/2 relative mt-6 md:0">
-                <h5 className="text-3xl leading-8 text-gray-600 mb-3">Hi! I'm</h5>
+                <h5 className="text-3xl leading-8 text-gray-400 mb-3">Hi! I'm</h5>
                 <h3 className="text-white text-4xl font-extrabold mb-4 font-Caveat">Shuva Karmakar</h3>
                 <TypeAnimation className='text-fuchsia-600'
                     sequence={[
@@ -47,7 +47,7 @@ const Banner = () => {
                     repeat={Infinity}
                 />
                 <div data-aos="fade-right">
-                    <p className="text-white opacity-50 my-4 text-justify">
+                    <p className="text-white opacity-80 my-4 text-justify">
                         Welcome to my portfolio! I am a passionate MERN stack web developer with expertise in HTML, CSS, JavaScript,
                         React, Express.js, Node.js, and MongoDB. With a strong foundation in front-end development, I strive to create
                         captivating user interfaces and seamless user experiences. I enjoy turning ideas into functional and visually

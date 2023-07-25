@@ -32,34 +32,34 @@ const NavBar = () => {
                             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                         >
                             <li>
-                                <a onClick={() => handleScrollToSection("about")} className="font-bold">About</a>
+                                <a onClick={() => handleScrollToSection("about")} className="font-bold uppercase text-white">About</a>
                             </li>
                             <li>
-                                <a onClick={() => handleScrollToSection("skills")} className="font-bold">Skills</a>
+                                <a onClick={() => handleScrollToSection("skills")} className="font-bold uppercase text-white">Skills</a>
                             </li>
                             <li>
-                                <a onClick={() => handleScrollToSection("projects")} className="font-bold">Projects</a>
+                                <a onClick={() => handleScrollToSection("projects")} className="font-bold uppercase text-white">Projects</a>
                             </li>
                             <li>
-                                <a onClick={() => handleScrollToSection("contact")} className="font-bold">Contact</a>
+                                <a onClick={() => handleScrollToSection("contact")} className="font-bold uppercase text-white">Contact</a>
                             </li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Shuva Karmakar</a>
+                    <a className="btn btn-ghost normal-case text-white lg:text-xl sm:text-lg">Shuva Karmakar</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li>
-                            <a onClick={() => handleScrollToSection("about")} className="font-bold">About</a>
+                            <a onClick={() => handleScrollToSection("about")} className="font-bold uppercase text-white">About</a>
                         </li>
                         <li>
-                            <a onClick={() => handleScrollToSection("skills")} className="font-bold">Skills</a>
+                            <a onClick={() => handleScrollToSection("skills")} className="font-bold uppercase text-white">Skills</a>
                         </li>
                         <li>
-                            <a onClick={() => handleScrollToSection("projects")} className="font-bold">Projects</a>
+                            <a onClick={() => handleScrollToSection("projects")} className="font-bold uppercase text-white">Projects</a>
                         </li>
                         <li>
-                            <a onClick={() => handleScrollToSection("contact")} className="font-bold">Contact</a>
+                            <a onClick={() => handleScrollToSection("contact")} className="font-bold uppercase text-white">Contact</a>
                         </li>
                     </ul>
                 </div>
