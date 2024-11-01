@@ -3,6 +3,7 @@ import certificate2 from '../../assets/Certificates/Coursera H9D5H5EUYI5K.jpg';
 import certificate3 from '../../assets/Certificates/Facebook Marketing.jpg';
 import certificate4 from '../../assets/Certificates/Programming Hero Certificate.jpg';
 import certificate5 from '../../assets/Certificates/CodemanBD WordPress.jpg';
+import certificate6 from '../../assets/Certificates/React hackerRank.jpg';
 
 const certifications = [
     {
@@ -18,6 +19,13 @@ const certifications = [
         issueDate: "August 2024",
         link: "https://coursera.org/share/c9daf12f8860dfa31a5cd94e89168362",
         image: certificate2,
+    },
+    {
+        title: "React",
+        organization: "HackerRank",
+        issueDate: "September 2024",
+        link: "https://www.hackerrank.com/certificates/eb84fe40f615",
+        image: certificate6,
     },
     {
         title: "Facebook Marketing",
