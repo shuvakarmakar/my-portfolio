@@ -8,7 +8,7 @@ const Certification = () => {
     const [selectedCert, setSelectedCert] = useState(null);
 
     useEffect(() => {
-        AOS.init({ duration: 900, easing: 'ease-out-cubic', once: true });
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true });
     }, []);
 
     const openModal = (cert) => setSelectedCert(cert);
@@ -19,10 +19,10 @@ const Certification = () => {
             <h2 className="text-3xl font-bold text-center mb-6 text-primary">Certifications</h2>
             <div className="container mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {certifications.map((cert, index) => (
-                    <div 
-                        key={index} 
+                    <div
+                        key={index}
                         className="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 relative cursor-pointer"
-                        data-aos="slide-left"
+                        data-aos="fade-down"
                     >
                         {/* Only open modal when clicking on the image */}
                         <img
@@ -30,7 +30,7 @@ const Certification = () => {
                             alt={`${cert.title} certificate`}
                             className="w-full h-48 object-cover rounded-md mb-4 cursor-pointer"
                             onClick={() => openModal(cert)}
-                            data-aos="flip-up"
+                            data-aos="zoom-in"
                         />
                         <h3 className="text-xl font-semibold text-primary">{cert.title}</h3>
                         <p className="text-gray-600">{cert.organization}</p>
@@ -51,16 +51,16 @@ const Certification = () => {
 
             {/* Modal */}
             {selectedCert && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" data-aos="zoom-out">
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" data-aos="zoom-in">
                     <div className="bg-white rounded-lg p-6 relative w-11/12 max-w-2xl">
-                        <button 
-                            className="absolute top-2 right-2 text-gray-600 hover:text-gray-800" 
+                        <button
+                            className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
                             onClick={closeModal}
                         >
                             &times;
                         </button>
-                        <img 
-                            src={selectedCert.image} 
+                        <img
+                            src={selectedCert.image}
                             alt={`${selectedCert.title} certificate`}
                             className="w-full h-auto rounded-md mb-4"
                         />
