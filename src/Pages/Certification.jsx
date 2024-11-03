@@ -6,6 +6,7 @@ import certifications from './Certification/CertificateData';
 
 const Certification = () => {
     const [selectedCert, setSelectedCert] = useState(null);
+    const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
         AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true });
@@ -14,14 +15,17 @@ const Certification = () => {
     const openModal = (cert) => setSelectedCert(cert);
     const closeModal = () => setSelectedCert(null);
 
+    // Determine the displayed certifications based on "showAll" state
+    const displayedCertifications = showAll ? certifications : certifications.slice(0, 6);
+
     return (
         <section className="py-8 bg-gray-100">
             <h2 className="text-3xl font-bold text-center mb-6 text-primary">Certifications</h2>
             <div className="container mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {certifications.map((cert, index) => (
+                {displayedCertifications.map((cert, index) => (
                     <div
                         key={index}
-                        className="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 relative cursor-pointer"
+                        className="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 relative"
                         data-aos="fade-down"
                     >
                         {/* Only open modal when clicking on the image */}
@@ -48,6 +52,19 @@ const Certification = () => {
                     </div>
                 ))}
             </div>
+
+            {/* View More / Hide Button */}
+            {certifications.length > 6 && (
+                <div className="text-center mt-6">
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className={`btn text-white px-6 py-3 rounded-full transform transition duration-300 ${showAll ? 'bg-red-600 hover:bg-red-700' : 'bg-blue-600 hover:bg-blue-700'
+                            }`}
+                    >
+                        {showAll ? 'Hide' : 'View More'}
+                    </button>
+                </div>
+            )}
 
             {/* Modal */}
             {selectedCert && (
