@@ -4,6 +4,9 @@ import certificate3 from '../../assets/Certificates/Facebook Marketing.jpg';
 import certificate4 from '../../assets/Certificates/Programming Hero Certificate.jpg';
 import certificate5 from '../../assets/Certificates/CodemanBD WordPress.jpg';
 import certificate6 from '../../assets/Certificates/React hackerRank.jpg';
+import certificate7 from '../../assets/Certificates/Coursera N6ZV9YW5SWUU.jpg';
+import certificate8 from '../../assets/Certificates/Coursera 26N7A6GH4MYK.jpg';
+import certificate9 from '../../assets/Certificates/Coursera 5C3LUTWBRMK9.jpg';
 
 const certifications = [
     {
@@ -47,6 +50,27 @@ const certifications = [
         issueDate: "March 2023",
         link: "",
         image: certificate5,
+    },
+    {
+        title: "Introduction to the Digital Advertising Landscape",
+        organization: "Coursera",
+        issueDate: "June 2020",
+        link: "",
+        image: certificate7,
+    },
+    {
+        title: "Technical Support Fundamentals",
+        organization: "Coursera",
+        issueDate: "June 2020",
+        link: "",
+        image: certificate8,
+    },
+    {
+        title: "AI For Everyone",
+        organization: "Coursera",
+        issueDate: "May 2020",
+        link: "",
+        image: certificate9,
     },
 ];
 
