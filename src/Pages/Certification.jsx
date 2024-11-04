@@ -15,7 +15,7 @@ const Certification = () => {
     const openModal = (cert) => setSelectedCert(cert);
     const closeModal = () => setSelectedCert(null);
 
-    // Determine the displayed certifications based on "showAll" state
+    // The displayed certifications based on "showAll" state
     const displayedCertifications = showAll ? certifications : certifications.slice(0, 6);
 
     return (
