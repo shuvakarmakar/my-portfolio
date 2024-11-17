@@ -1,3 +1,4 @@
+import certificate0 from '../../assets/Certificates/Coursera QRDXZQXAVYZ4.jpg';
 import certificate1 from '../../assets/Certificates/UC-eecab366-5289-4427-a60f-63ba87b12c4b.jpg';
 import certificate2 from '../../assets/Certificates/Coursera H9D5H5EUYI5K.jpg';
 import certificate3 from '../../assets/Certificates/Facebook Marketing.jpg';
@@ -9,6 +10,13 @@ import certificate8 from '../../assets/Certificates/Coursera 26N7A6GH4MYK.jpg';
 import certificate9 from '../../assets/Certificates/Coursera 5C3LUTWBRMK9.jpg';
 
 const certifications = [
+    {
+        title: "The Bits and Bytes of Computer Networking",
+        organization: "Coursera",
+        issueDate: "November 2024",
+        link: "https://coursera.org/share/c2839fcdd4e63948d4c19966f3cfec38",
+        image: certificate0,
+    },
     {
         title: "AWS Certified Cloud Practitioner",
         organization: "Amazon Web Services (AWS)",
