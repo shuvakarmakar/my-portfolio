@@ -39,6 +39,8 @@ const Banner = () => {
                         'Frontend Web Developer',
                         1000,
                         'MERN Stack Developer',
+                        1000,
+                        'Digital Marketer',
                         1000
                     ]}
                     wrapper="span"
