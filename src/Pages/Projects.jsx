@@ -3,7 +3,6 @@ import projectNew from '../../src/assets/Projects/Camera_Shop.png';
 import project0 from '../../src/assets/Projects/Project4.png';
 import project1 from '../../src/assets/Projects/Project1.png';
 import project2 from '../../src/assets/Projects/Project2.png';
-import project3 from '../../src/assets/Projects/Project3.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaGithub, FaLink } from 'react-icons/fa';
@@ -65,7 +64,7 @@ const Projects = () => {
 
     return (
         <div id="projects">
-            <h2 className="text-4xl font-bold text-center my-10 text-white md:my-10">My Projects</h2>
+            <h2 className="text-4xl font-bold text-center my-10 text-white md:my-14">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-10">
                 {(showAll ? projects : projects.slice(0, 3)).map((project, index) => (
                     <div
@@ -132,11 +131,11 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
-            <div className="text-center my-5">
+            <div className="text-center my-6 md:my-10">
                 <button
-                    className="btn btn-primary"
                     onClick={() => setShowAll(!showAll)}
-                    data-aos="zoom-in"
+                    className={`btn text-white px-6 py-3 rounded-full transform transition duration-300 ${showAll ? 'bg-red-600 hover:bg-red-700' : 'bg-blue-600 hover:bg-blue-700'
+                        }`}
                 >
                     {showAll ? 'Hide' : 'View More'}
                 </button>

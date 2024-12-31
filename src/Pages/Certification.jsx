@@ -55,7 +55,7 @@ const Certification = () => {
 
             {/* View More / Hide Button */}
             {certifications.length > 6 && (
-                <div className="text-center mt-6">
+                <div className="text-center my-6 md:my-10">
                     <button
                         onClick={() => setShowAll(!showAll)}
                         className={`btn text-white px-6 py-3 rounded-full transform transition duration-300 ${showAll ? 'bg-red-600 hover:bg-red-700' : 'bg-blue-600 hover:bg-blue-700'
