@@ -1,22 +1,34 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import projectNew from '../../src/assets/Projects/Camera_Shop.png';
+import project0 from '../../src/assets/Projects/Project4.png';
 import project1 from '../../src/assets/Projects/Project1.png';
 import project2 from '../../src/assets/Projects/Project2.png';
 import project3 from '../../src/assets/Projects/Project3.png';
-import project4 from '../../src/assets/Projects/Project4.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaGithub, FaLink } from 'react-icons/fa';
 
 const Projects = () => {
+    const [showAll, setShowAll] = useState(false);
+
     const projects = [
         {
-            image: project4,
+            image: projectNew,
+            title: 'Camera Shop',
+            githubLink: 'https://github.com/shuvakarmakar/my-camera-shop-client',
+            serverSideLink: 'https://github.com/shuvakarmakar/my-camera-shop-server',
+            liveLink: 'https://camera-shop-shuva.vercel.app/',
+            description: 'Camera Shop is a comprehensive e-commerce platform where users can browse, sell, and manage camera products. It supports three user roles: Admins for system management, Sellers for managing products, and Buyers for browsing and purchasing. The project includes features like role-based authentication, product inventory, wishlist management, and secure payment integration.',
+            technologies: 'ReactJS, Tailwind CSS, DaisyUI, Node.js, Express.js, MongoDB, Firebase, SweetAlert2, AOS, JWT, Google Authentication, EmailJS'
+        },
+        {
+            image: project0,
             title: 'ELearner (Spoken English Learning Website)',
             githubLink: 'https://github.com/shuvakarmakar/spoken-english-client',
             serverSideLink: 'https://github.com/shuvakarmakar/spoken-english-server',
             liveLink: 'https://spoken-english-65d22.web.app/',
             description: ' This website, a Spoken English learning platform, offers free and paid services for users to learn English, featuring numerous useful features. The project has three roles: an Admin manages instructors and users, instructors handle course management, and users access courses with free videos and voice-to-text capabilities. It is a group project, and I served as the team leader.',
-            technologies:  'Tailwind CSS, TypeScript, ReactJS, MongoDB, ExpressJS, NodeJS, SSLCommerze, Socket.io, JWT, TanStack Query, Firebase'
+            technologies: 'Tailwind CSS, TypeScript, ReactJS, MongoDB, ExpressJS, NodeJS, SSLCommerze, Socket.io, JWT, TanStack Query, Firebase'
         },
         {
             image: project1,
@@ -34,7 +46,7 @@ const Projects = () => {
             serverSideLink: 'https://github.com/shuvakarmakar/toy-marketplace-server',
             liveLink: 'https://toy-marketplace-33160.web.app/',
             description: 'This Website is focused on Toy Marketplace. A Seller can add, update, and delete Toys from his Dashboard, Sellere can easily see all sellers toys from ALLToys page. A search button included in All Toys page. In My Toys page a seller can see his all added toys',
-            technologies:  'Google Authentication, Tailwind, daisyIU, ReactJS, MongoDB, Express.JS, NodeJS'
+            technologies: 'Google Authentication, Tailwind, daisyIU, ReactJS, MongoDB, Express.JS, NodeJS'
         }
     ];
 
@@ -53,9 +65,9 @@ const Projects = () => {
 
     return (
         <div id="projects">
-            <h2 className="text-4xl font-bold text-center my-10 text-white md:my-16">My Projects</h2>
+            <h2 className="text-4xl font-bold text-center my-10 text-white md:my-10">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-10">
-                {projects.map((project, index) => (
+                {(showAll ? projects : projects.slice(0, 3)).map((project, index) => (
                     <div
                         className="relative flex flex-col bg-clip-border text-gray-700 border-2 border-[#001C30] shadow-2xl rounded-lg h-96 bg-gray-100"
                         data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
@@ -119,6 +131,15 @@ const Projects = () => {
                         </dialog>
                     </div>
                 ))}
+            </div>
+            <div className="text-center my-5">
+                <button
+                    className="btn btn-primary"
+                    onClick={() => setShowAll(!showAll)}
+                    data-aos="zoom-in"
+                >
+                    {showAll ? 'Hide' : 'View More'}
+                </button>
             </div>
         </div>
     );
