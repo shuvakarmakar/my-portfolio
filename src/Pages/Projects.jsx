@@ -50,8 +50,9 @@ const Projects = () => {
     ];
 
     React.useEffect(() => {
-        AOS.init();
+        AOS.init({ once: true });
     }, []);
+
 
     const modalRefs = useRef([]);
 
@@ -69,7 +70,9 @@ const Projects = () => {
                 {(showAll ? projects : projects.slice(0, 3)).map((project, index) => (
                     <div
                         className="relative flex flex-col bg-clip-border text-gray-700 border-2 border-[#001C30] shadow-2xl rounded-lg h-96 bg-gray-100"
-                        data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+                        data-aos="fade-up"  
+                        data-aos-delay={`${index * 200}`} 
+                        data-aos-duration="1000" 
                         key={index}
                     >
                         <div className="image-container h-60 overflow-y-auto">
@@ -113,24 +116,10 @@ const Projects = () => {
                                 </button>
                             </div>
                         </div>
-                        <dialog
-                            ref={(ref) => (modalRefs.current[index] = ref)}
-                            className="modal md:modal-middle sm:modal-top"
-                        >
-                            <form method="dialog" className="modal-box">
-                                <h3 className="font-bold text-lg">{project.title}</h3>
-                                <p className="py-4 text-justify"><span className='font-bold'>Description</span> : {project.description}</p>
-                                <p className="py-4 text-justify"><span className='font-bold'>Technologies</span> : {project.technologies}</p>
-                                <div className="modal-action">
-                                    <button className="btn" onClick={() => modalRefs.current[index]?.close()}>
-                                        Close
-                                    </button>
-                                </div>
-                            </form>
-                        </dialog>
                     </div>
                 ))}
             </div>
+
             <div className="text-center my-6 md:my-10">
                 <button
                     onClick={() => setShowAll(!showAll)}

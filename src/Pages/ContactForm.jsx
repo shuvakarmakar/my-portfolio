@@ -6,7 +6,11 @@ import AOS from 'aos';
 
 const ContactForm = () => {
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 800, 
+            easing: 'ease-in-out', 
+            once: false,
+        });
     }, []);
 
     const form = useRef();
@@ -23,7 +27,7 @@ const ContactForm = () => {
 
                 // Display success message using Swal
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
                     title: 'Your Message Has Been Sent Successfully',
                     showConfirmButton: false,
@@ -33,14 +37,21 @@ const ContactForm = () => {
                 console.log(error.text);
             });
     };
+
     return (
-        <div className='px-4 mb-10' id='contact'>
-            <h2 className='text-4xl font-bold text-center text-white my-10 md:my-16'>Contact Me</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-                <div className='' data-aos='fade-right'>
+        <div className='px-4 md:px-10 lg:px-20 mb-10' id='contact'>
+            <h2 className='text-4xl font-bold text-center text-white my-10 md:my-16'>
+                Contact Me
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+                <div data-aos='fade-up'>
                     <form className='w-full mx-auto px-6' ref={form} onSubmit={sendEmail}>
-                        <h3 className='text-2xl font-bold mb-3 text-white'>Write Me Here :</h3>
-                        <label className='block mb-2 text-white'>Name</label>
+                        <h3 className='text-2xl font-bold mb-3 text-white'>
+                            Write Me Here :
+                        </h3>
+                        <label className='block mb-2 text-white'>
+                            Name
+                        </label>
                         <input
                             className='w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400'
                             type='text'
@@ -48,7 +59,9 @@ const ContactForm = () => {
                             placeholder='Enter your name'
                         />
 
-                        <label className='block mb-2 text-white'>Email</label>
+                        <label className='block mb-2 text-white'>
+                            Email
+                        </label>
                         <input
                             className='w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400'
                             type='email'
@@ -56,7 +69,9 @@ const ContactForm = () => {
                             placeholder='Enter your email'
                         />
 
-                        <label className='block mb-2 text-white'>Message</label>
+                        <label className='block mb-2 text-white'>
+                            Message
+                        </label>
                         <textarea
                             className='w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400'
                             name='message'
@@ -70,22 +85,23 @@ const ContactForm = () => {
                         />
                     </form>
                 </div>
-                <div className='md:w-1/2 mx-auto' data-aos='fade-left'>
-                    <h3 className='text-2xl font-bold text-white'>Contact Info</h3>
+                <div className='md:w-1/2 mx-auto' data-aos='fade-up'>
+                    <h3 className='text-2xl font-bold text-white'>
+                        Contact Info
+                    </h3>
                     <p className='flex items-center my-3 text-white gap-3'>
-                        {' '}
                         <FaMailBulk /> Email: shuvakarmakar@gmail.com
                     </p>
                     <p className='flex items-center my-3 text-white gap-3'>
-                        {' '}
                         <FaPhoneAlt /> Phone: +8801684422951
                     </p>
                     <p className='flex items-center my-3 text-white gap-3'>
-                        {' '}
                         <FaLocationArrow /> Location: 12/1 S.K.Road, Narayanganj
                     </p>
 
-                    <h3 className='text-2xl font-bold text-white'>Social Link:</h3>
+                    <h3 className='text-2xl font-bold text-white'>
+                        Social Link:
+                    </h3>
                     <div className='flex items-center mt-6 gap-8'>
                         <a
                             href='https://web.facebook.com/shuvakarmakar97'
@@ -123,7 +139,6 @@ const ContactForm = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 

@@ -9,7 +9,7 @@ const Certification = () => {
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
-        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true });
+        AOS.init({ duration: 500, easing: 'ease-in-out' });
     }, []);
 
     const openModal = (cert) => setSelectedCert(cert);
@@ -26,15 +26,14 @@ const Certification = () => {
                     <div
                         key={index}
                         className="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 relative"
-                        data-aos="fade-down"
+                        data-aos="fade-up"
+                        data-aos-delay={`${index * 200}`} // Delay each certificate animation
                     >
-                        {/* Only open modal when clicking on the image */}
                         <img
                             src={cert.image}
                             alt={`${cert.title} certificate`}
                             className="w-full h-48 object-cover rounded-md mb-4 cursor-pointer"
                             onClick={() => openModal(cert)}
-                            data-aos="zoom-in"
                         />
                         <h3 className="text-xl font-semibold text-primary">{cert.title}</h3>
                         <p className="text-gray-600">{cert.organization}</p>
@@ -66,10 +65,17 @@ const Certification = () => {
                 </div>
             )}
 
-            {/* Modal */}
+            {/* Modal with AOS Animation */}
             {selectedCert && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" data-aos="zoom-in">
-                    <div className="bg-white rounded-lg p-6 relative w-11/12 max-w-2xl">
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    onClick={closeModal} // Close modal when clicking outside
+                >
+                    <div
+                        className="bg-white rounded-lg p-6 relative w-11/12 max-w-2xl"
+                        data-aos="zoom-in"
+                        onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking inside
+                    >
                         <button
                             className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
                             onClick={closeModal}

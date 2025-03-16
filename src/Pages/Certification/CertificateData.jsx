@@ -1,3 +1,5 @@
+import certificate_OS from '../../assets/Certificates/Coursera 2RZI3RJ8KUMM.jpg';
+import certificate_Research from '../../assets/Certificates/certificate-1742111045567.jpg';
 import certificate0 from '../../assets/Certificates/Coursera QRDXZQXAVYZ4.jpg';
 import certificate1 from '../../assets/Certificates/UC-eecab366-5289-4427-a60f-63ba87b12c4b.jpg';
 import certificate2 from '../../assets/Certificates/Coursera H9D5H5EUYI5K.jpg';
@@ -10,6 +12,20 @@ import certificate_AI from '../../assets/Certificates/Coursera 26N7A6GH4MYK.jpg'
 import certificate_digital from '../../assets/Certificates/Coursera 5C3LUTWBRMK9.jpg';
 
 const certifications = [
+    {
+        title: "Operating Systems and You: Becoming a Power User",
+        organization: "Coursera",
+        issueDate: "February 2025",
+        link: "https://coursera.org/share/00e3d07b754fca2686e5cc14b674ceb48",
+        image: certificate_OS,
+    },
+    {
+        title: "Research Methodology: Beginning to Advance",
+        organization: "Research Help bangladesh",
+        issueDate: "December 2024",
+        link: "https://course.researchhelpbd.com/tutor-certificate/?cert_hash=064de67bf9d12401",
+        image: certificate_Research,
+    },
     {
         title: "The Bits and Bytes of Computer Networking",
         organization: "Coursera",
