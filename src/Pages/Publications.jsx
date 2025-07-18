@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { SiResearchgate, SiGooglescholar } from 'react-icons/si';
+import { SiResearchgate, SiGooglescholar, SiOrcid } from 'react-icons/si';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import publications from '../Pages/Publication/PublicationData';
@@ -86,7 +86,18 @@ const Publications = () => {
                     <SiGooglescholar size={28} className="text-blue-600" />
                     <span className="text-yellow-400 text-lg font-semibold">Google Scholar</span>
                 </a>
+
+                <a
+                    href="https://orcid.org/0009-0008-8176-1990"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 hover:text-blue-800 transition"
+                >
+                    <SiOrcid size={28} className="text-blue-600" />
+                    <span className="text-[#A6CE39] text-lg font-semibold">ORCID</span>
+                </a>
             </div>
+
 
             {publications.length > 6 && (
                 <div className="text-center mt-10">
