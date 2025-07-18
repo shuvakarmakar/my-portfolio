@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import AboutMe from "./AboutMe";
 import Certification from "./Certification";
 import Loader from "./Loader";
+import Publications from "./Publications";
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +33,7 @@ const Home = () => {
                     <AboutMe />
                     <Skills />
                     <Projects />
+                    <Publications />
                     <Certification />
                     <ContactForm />
                     <Footer />

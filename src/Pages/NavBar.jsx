@@ -41,6 +41,9 @@ const NavBar = () => {
                                 <a onClick={() => handleScrollToSection("projects")} className="font-bold uppercase text-white">Projects</a>
                             </li>
                             <li>
+                                <a onClick={() => handleScrollToSection("publications")} className="font-bold uppercase text-white">Publications</a>
+                            </li>
+                            <li>
                                 <a onClick={() => handleScrollToSection("contact")} className="font-bold uppercase text-white">Contact</a>
                             </li>
                         </ul>
@@ -59,9 +62,13 @@ const NavBar = () => {
                             <a onClick={() => handleScrollToSection("projects")} className="font-bold uppercase text-white">Projects</a>
                         </li>
                         <li>
+                            <a onClick={() => handleScrollToSection("publications")} className="font-bold uppercase text-white">Publications</a>
+                        </li>
+                        <li>
                             <a onClick={() => handleScrollToSection("contact")} className="font-bold uppercase text-white">Contact</a>
                         </li>
                     </ul>
+
                 </div>
                 <div className="navbar-end">
                     <button className="btn btn-outline btn-success" onClick={() => handleScrollToSection("contact")}>Hire Me</button>
