@@ -90,7 +90,7 @@ const ContactForm = () => {
                         Contact Info
                     </h3>
                     <p className='flex items-center my-3 text-white gap-3'>
-                        <FaMailBulk /> Email: shuvakarmakar@gmail.com
+                        <FaMailBulk /> Email: me@shuvakarmakar.com
                     </p>
                     <p className='flex items-center my-3 text-white gap-3'>
                         <FaPhoneAlt /> Phone: +8801684422951
