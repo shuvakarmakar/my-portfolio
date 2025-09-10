@@ -20,8 +20,8 @@ const Publications = () => {
 
             <div
                 className={`max-w-7xl mx-auto grid gap-8 ${displayedPublications.length === 1
-                    ? 'grid-cols-1 place-items-center'
-                    : 'sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                        ? 'grid-cols-1 place-items-center'
+                        : 'sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
                     }`}
             >
                 {displayedPublications.map((pub, index) => (
@@ -66,7 +66,7 @@ const Publications = () => {
             </div>
 
             {/* Academic Profiles Links */}
-            <div className="max-w-7xl mx-auto flex justify-center space-x-8 mt-12">
+            <div className="max-w-7xl mx-auto flex flex-col items-center space-y-6 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-8 mt-12">
                 <a
                     href="https://www.researchgate.net/profile/Shuva-Karmakar"
                     target="_blank"
@@ -97,7 +97,6 @@ const Publications = () => {
                     <span className="text-[#A6CE39] text-lg font-semibold">ORCID</span>
                 </a>
             </div>
-
 
             {publications.length > 6 && (
                 <div className="text-center mt-10">
