@@ -93,10 +93,10 @@ const ContactForm = () => {
                         <FaMailBulk /> Email: me@shuvakarmakar.com
                     </p>
                     <p className='flex items-center my-3 text-white gap-3'>
-                        <FaPhoneAlt /> Phone: +8801684422951
+                        <FaPhoneAlt /> Phone: +4915757347941
                     </p>
                     <p className='flex items-center my-3 text-white gap-3'>
-                        <FaLocationArrow /> Location: 12/1 S.K.Road, Narayanganj
+                        <FaLocationArrow /> Location: Siolistraße 7, 60323 Frankfurt am Main 
                     </p>
 
                     <h3 className='text-2xl font-bold text-white'>

@@ -10,6 +10,7 @@ import AboutMe from "./AboutMe";
 import Certification from "./Certification";
 import Loader from "./Loader";
 import Publications from "./Publications";
+import Education from "./Education";
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -31,6 +32,7 @@ const Home = () => {
                     <NavBar />
                     <Banner />
                     <AboutMe />
+                    <Education></Education>
                     <Skills />
                     <Projects />
                     <Publications />
