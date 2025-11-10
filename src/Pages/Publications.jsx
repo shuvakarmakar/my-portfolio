@@ -18,19 +18,16 @@ const Publications = () => {
         <section id="publications" className="py-16 px-4 sm:px-6 md:px-10 bg-[#0f172a]">
             <h2 className="text-4xl font-bold text-center text-white mb-12">My Publications</h2>
 
+            {/* Publications Grid */}
             <div
-                className={`max-w-7xl mx-auto grid gap-8 ${displayedPublications.length === 1
-                        ? 'grid-cols-1 place-items-center'
-                        : 'sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-                    }`}
+                className={`max-w-7xl mx-auto flex flex-wrap justify-center gap-8`}
             >
                 {displayedPublications.map((pub, index) => (
                     <div
                         key={index}
-                        className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-2xl shadow-lg border border-gray-200 transition-transform hover:scale-105 w-full"
+                        className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-2xl shadow-lg border border-gray-200 transition-transform hover:scale-105 w-full sm:w-[90%] md:w-[45%] lg:w-[30%] max-w-[500px]"
                         data-aos="fade-up"
                         data-aos-delay={`${index * 150}`}
-                        style={{ maxWidth: '500px' }}
                     >
                         <h3 className="text-lg md:text-xl font-bold text-primary mb-2">{pub.title}</h3>
                         <p className="text-gray-700 text-sm md:text-base mb-1">{pub.authors}</p>
@@ -98,11 +95,14 @@ const Publications = () => {
                 </a>
             </div>
 
+            {/* View More Button */}
             {publications.length > 6 && (
                 <div className="text-center mt-10">
                     <button
                         onClick={() => setShowAll(!showAll)}
-                        className={`px-6 py-3 text-white rounded-full font-semibold ${showAll ? 'bg-red-600 hover:bg-red-700' : 'bg-green-600 hover:bg-green-700'
+                        className={`px-6 py-3 text-white rounded-full font-semibold ${showAll
+                                ? 'bg-red-600 hover:bg-red-700'
+                                : 'bg-green-600 hover:bg-green-700'
                             } transition duration-300`}
                     >
                         {showAll ? 'Hide' : 'View More'}
@@ -110,6 +110,7 @@ const Publications = () => {
                 </div>
             )}
         </section>
+
     );
 };
 
