@@ -7,7 +7,14 @@ const publications = [
     doi: '10.1109/ICETECC65365.2025.11070257',
     link: 'https://ieeexplore.ieee.org/document/11070257',
   },
-  // You can add more publications here
+  {
+    title: 'A Novel Hybrid Approach for Load Forecasting: Multi-Head Attention Integrated LCG Model with Statistical Outlier Management',
+    authors: 'Saif Sabbir, Shuva Karmakar, Amortya Ghosh, Feruzbek Jumaniyozov, Shokhjakhon Akhmedov, Mohammad Tarek Aziz',
+    publication: '2025 International Conference on Quantum Photonics, Artificial Intelligence, and Networking (QPAIN)',
+    date: 'September 2025',
+    doi: '10.1109/QPAIN66474.2025.11172259',
+    link: 'https://ieeexplore.ieee.org/document/11172259',
+  },
 ];
 
 export default publications;
